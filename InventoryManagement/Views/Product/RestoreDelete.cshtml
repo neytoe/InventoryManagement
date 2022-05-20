@@ -32,7 +32,7 @@
                     <td>@Model.CreatedAt</td>
                     <td>@Model.ModifiedAt</td>
                     <td>
-                        <input class="form-control" asp-for="@Model.DeleteComments" placeholder="Reason for Undelete" value=""  />
+                        <input class="form-control" asp-for="@Model.DeleteComments" placeholder="@Model.DeleteComments" value=""  />
                     </td>
                     <td> <button type="submit" class="btn btn-outline-danger">Restore</button></td>
                    
