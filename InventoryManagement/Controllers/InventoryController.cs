@@ -56,20 +56,8 @@ namespace InventoryManagement.Controllers
             return View("ManageInventory", list);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> DeleteInventory(int id)
-        {
-            var returnModel = await _inventoryRepo.Find(id);
-            return View("ManageProduct", returnModel);
-        }
-        [HttpDelete]
-        public async Task<IActionResult> DeleteInventory(int id)
-        {
-            await _inventoryRepo.Delete(id);
-            var inventory = await _inventoryRepo.FindAll();
-            return View("ManageInventory", inventory);
-            
-        }
+      
+       
 
 
      
