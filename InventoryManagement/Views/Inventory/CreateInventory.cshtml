@@ -1,0 +1,39 @@
+﻿@model  InventoryManagement.ViewModels.AddInventoryViewModel
+
+@{
+   
+}
+@if (ViewData["Message"] != null)
+{
+    <h4 class="alert alert-danger">@ViewData["Message"]</h4>
+}
+<h2>Add Inventory</h2>
+<form enctype="multipart/form-data" asp-action="Index" method="Post">
+    <fieldset> 
+        <legend>Inventory Details</legend>
+            <div class="form-group row">
+                <label asp-for="@Model.Name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="@Model.Name" placeholder="Name" value="" required />
+                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="@Model.Location" class="col-sm-2 col-form-label">Location</label>
+                <div class="col-sm-10">
+                    <input class="form-control" asp-for="@Model.Location" placeholder="Location" value=""  required/>
+                    <span asp-validation-for="@Model.Location" class="text-danger"></span>
+                </div>
+            </div>
+    </fieldset>
+     <br />     
+
+   
+
+    <button type="submit" class="btn btn-outline-success">Add</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+</form>
+
+
+  

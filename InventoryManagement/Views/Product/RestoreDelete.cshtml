@@ -1,0 +1,47 @@
+﻿@model InventoryManagement.Entities.Product
+@{
+    
+}
+
+<h2 style="color:deeppink">Confirm Undeletion</h2>
+<form enctype="multipart/form-data" asp-controller="Product" asp-action="RestoreDelete" asp-route-id="@Model.Id"  method="Post">
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Details</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>CreatedAt</th>
+                    <th>ModifiedAt</th>
+                    <th>DeleteComments</th>
+                </tr>
+            </thead>
+
+            <tbody>
+      
+        
+                <tr>
+                    <td>@Model.Id</td>
+                    <td>@Model.Name</td>
+                    <td>@Model.Details</td>
+                    <td>@Model.Quantity</td>
+                    <td>@Model.Price</td>
+                    <td>@Model.CreatedAt</td>
+                    <td>@Model.ModifiedAt</td>
+                    <td>
+                        <input class="form-control" asp-for="@Model.DeleteComments" placeholder="Reason for Undelete" value=""  />
+                    </td>
+                    <td> <button type="submit" class="btn btn-outline-danger">Restore</button></td>
+                   
+           
+                </tr>
+        
+            </tbody>
+
+         </table>
+ </form>
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>

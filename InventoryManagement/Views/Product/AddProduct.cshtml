@@ -1,0 +1,58 @@
+﻿@model  InventoryManagement.ViewModels.AddProductViewModel
+
+@{
+}
+
+
+<h2>Add Product</h2>
+<form enctype="multipart/form-data" asp-action="AddProduct" asp-route-id="@Model.InventoryId"  method="Post">
+   
+    <fieldset>
+        <legend>Product Details</legend>
+         
+        <div class="form-group row">
+            <label asp-for="@Model.Name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="@Model.Name" placeholder="Product Name" value=""  required/>
+                <span asp-validation-for="@Model.Name" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label asp-for="@Model.Details" class="col-sm-2 col-form-label">Details</label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="@Model.Details" placeholder="Product Details" value="" required />
+                <span asp-validation-for="@Model.Details" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label asp-for="@Model.Quantity" class="col-sm-2 col-form-label">Quantity</label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="@Model.Quantity" value="" type="number" required/>
+                <span asp-validation-for="@Model.Quantity" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label asp-for="@Model.Price" class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+                <input class="form-control" asp-for="@Model.Price" value="" type="number" />
+                <span asp-validation-for="@Model.Price" class="text-danger"></span>
+            </div>
+        </div>
+
+       
+       </fieldset>
+        
+
+
+    <button type="submit" class="btn btn-outline-success">Add</button>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+    <a asp-controller="Product" asp-action="ManageProduct" class="btn btn-outline-Secondary">View All Products</a>
+</form>
+
+
+  

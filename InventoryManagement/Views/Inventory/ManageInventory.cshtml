@@ -1,0 +1,35 @@
+﻿@model List<InventoryManagement.Entities.Inventory>
+@{
+    ViewBag.Title = "Inventory List";
+}
+<a asp-controller="Inventory" asp-action="Index" class="btn btn-primary">Home</a>
+<h1>Manage Inventory 
+
+</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Location</td>
+        
+             <td><a class="btn btn-outline-success" asp-controller="Product"  asp-action="AddProduct" asp-route-id="@item.Id">Add Products</a></td>
+             <td><a class="btn btn-outline-danger" asp-controller="Product"  asp-action="ManageProduct" asp-route-id="@item.Id">View Products</a></td
+             
+            <td><a class="btn btn-outline-danger" asp-controller="Product" asp-action="GetdeletedProducts" asp-route-id="@item.Id">Restore Deleted Products</a></td>
+        </tr>
+        }
+    </tbody>
+   
+
+</table>
