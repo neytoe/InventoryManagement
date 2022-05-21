@@ -1,5 +1,6 @@
 # InventoryManagement
- Shopify Fall 2022 Internship Challenge
+ A Mini Inventory Management System that can create an inventory. 
+ Each Inventory can contain products, and this product items can be edited, viewed in form of a list, deleted and restored.
 
 # Functionalities
 * Create Inventory/ Multiple Inventories
