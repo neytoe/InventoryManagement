@@ -11,3 +11,7 @@
 
 # Technologies
 * C#, Sqlite, EntityFramework Core, Asp.Net MVC, Auto Mapper 
+
+# Replit Link
+* https://inventorymanagement.netoanyankah.repl.co/
+* pls note that the program had issues running on the replit browser, but clicking on "Open in new tab" would suffice.
